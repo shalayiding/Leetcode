@@ -69,7 +69,7 @@ public:
         
         for(int i=0;i<startGene.length();i++){
             if (startGene[i] !=endGene[i]){
-                string tmp ; 
+                string tmp; 
 
 
             }
