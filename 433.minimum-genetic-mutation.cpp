@@ -66,19 +66,37 @@
 class Solution {
 public:
     int minMutation(string startGene, string endGene, vector<string>& bank) {
-        
+        int result = 0;
         for(int i=0;i<startGene.length();i++){
-            if (startGene[i] !=endGene[i]){
-                string tmp; 
-
+            for(int j=0;j<startGene.length();i++){
 
             }
-
-
+            if (startGene[i] !=endGene[i]){
+                startGene[i] = endGene[i];
+                if (find(bank.begin(),bank.end(),startGene)!=bank.end()){
+                    result++;
+                }else {
+                    return 0;
+                }
+            }
         }
-        return 0;
+        if (startGene == endGene)
+            return result;
+        else 
+            return 0;
 
     }
+    int diff(string s1,string s2){
+        int result = 0;
+        for(int i=0;i<s1.length();i++){
+            if(s1[i]!=s2[i])
+                return 0;
+        }
+
+
+    }
+
+
 };
 // @lc code=end
 
